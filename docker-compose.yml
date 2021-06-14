@@ -6,8 +6,10 @@ services:
     image: redis
 
   app:
-    image: node:latest
     container_name: mwf_app
+
+    build: ./source/app
+
     volumes:
       - ./source/app:/app
       - M:/mus/gp:/gp
@@ -17,8 +19,6 @@ services:
 
     depends_on:
       - redis
-
-    command: npx nodemon --legacy-watch -w /var/app/src -x npx ts-node /var/app/src/index.ts
 
     ports:
       - "3000:3000"
