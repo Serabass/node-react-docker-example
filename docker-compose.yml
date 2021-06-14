@@ -25,6 +25,16 @@ services:
 
     hostname: app.docker
 
+  python-app:
+    container_name: mwf_python_app
+
+    build: ./source/python-server
+
+    ports:
+      - "8000:8000"
+
+    hostname: py.docker
+
   frontend:
     container_name: mwf_frontend
 
