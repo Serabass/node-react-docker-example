@@ -9,7 +9,7 @@ services:
     image: node:latest
     container_name: mwf_app
     volumes:
-      - ./source/app:/var/app
+      - ./source/app:/app
       - M:/mus/gp:/gp
 
     environment:
@@ -29,7 +29,7 @@ services:
     build: ./source/frontend
 
     volumes:
-      - ./source/frontend:/var/frontend
+      - ./source/frontend:/app
 
     depends_on:
       - app

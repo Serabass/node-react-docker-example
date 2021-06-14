@@ -3,7 +3,7 @@ import express from 'express';
 let app = express();
 
 app.get('/', (req, res) => {
-    res.end('Hello from Docker1');
+    res.end('Hello from Docker');
 });
 
 app.listen(process.env.PORT, () => {
