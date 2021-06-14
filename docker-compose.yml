@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  redis:
+    container_name: mwf_redis
+    image: redis
+
+  app:
+    image: node:latest
+    container_name: mwf_app
+    volumes:
+      - ./source/app:/var/app
+      - M:/mus/gp:/gp
+
+    environment:
+      PORT: 3000
+
+    depends_on:
+      - redis
+
+    command: npx nodemon --legacy-watch -w /var/app/src -x npx ts-node /var/app/src/index.ts
+
+    ports:
+      - "3000:3000"
+
+  frontend:
+    container_name: mwf_frontend
+
+    build: ./source/frontend
+
+    volumes:
+      - ./source/frontend:/var/frontend
+
+    depends_on:
+      - app
+
+    ports:
+      - "3001:3000"
