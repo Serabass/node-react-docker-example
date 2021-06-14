@@ -14,7 +14,7 @@ module.exports = function (app) {
     app.use(
         '/api/python',
         createProxyMiddleware({
-            target: 'http://py.docker:8000',
+            target: 'http://py.docker:8111',
             changeOrigin: true,
             pathRewrite: {
                 "^/api/python": "",

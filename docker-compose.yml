@@ -34,7 +34,7 @@ services:
       - ./source/python-server:/app
 
     ports:
-      - "8000:8000"
+      - "8111:8111"
 
     hostname: py.docker
 
