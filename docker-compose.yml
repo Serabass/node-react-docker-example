@@ -30,6 +30,9 @@ services:
 
     build: ./source/python-server
 
+    volumes:
+      - ./source/python-server:/app
+
     ports:
       - "8000:8000"
 

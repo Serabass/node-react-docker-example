@@ -1,5 +1,9 @@
 FROM python:latest
 
+WORKDIR /app
+
 EXPOSE 8000
 
-CMD ["python", "-m", "http.server"]
+RUN pip install -U flask
+
+CMD ["python", "server.py"]
