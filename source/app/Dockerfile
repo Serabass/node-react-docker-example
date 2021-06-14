@@ -13,4 +13,4 @@ RUN npm install
 
 COPY . ./
 
-CMD ["npx", "nodemon", "--legacy-watch", "-w", "/var/app/src", "-x", "npx ts-node src/app.ts"]
+CMD ["npx", "nodemon", "--legacy-watch", "-w", "/app/src", "-e", "ts", "-x", "npx ts-node src/app.ts"]
