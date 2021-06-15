@@ -17,7 +17,9 @@ function useAjax(url: string) {
 
 function App() {
   let [node]: any[] = useAjax('/api/node');
-  let [python]: any[] = useAjax('/api/python/test');
+  let [python]: any[] = useAjax('/api/python');
+  let [php]: any[] = useAjax('/api/php');
+
 
   return (
     <div className="App">
@@ -25,6 +27,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Node: {node?.message}</p>
         <p>Python: {JSON.stringify(python)}</p>
+        <p>PHP: {JSON.stringify(php)}</p>
       </header>
     </div>
   );
