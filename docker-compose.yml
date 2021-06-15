@@ -43,13 +43,13 @@ services:
   php-app:
     container_name: mwf_php_app
 
-    build: ./source/php
+    image: docker.io/bitnami/php-fpm:latest
 
     volumes:
       - ./source/php:/app
 
     ports:
-      - "8000:80"
+      - "8000:9000"
 
     hostname: php.docker
 
