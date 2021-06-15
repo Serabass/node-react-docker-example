@@ -24,9 +24,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Node: <b>{node?.message}</b></p>
-        <p>Python: <b>{python?.message}</b></p>
-        <p>PHP: <b>{php?.message}</b></p>
+        <p>Node AJAX Response: <b>{node?.message}</b></p>
+        <p>Python AJAX Response: <b>{python?.message}</b></p>
+        <p>PHP AJAX Response: <b>{php?.message}</b></p>
       </header>
     </div>
   );
