@@ -25,8 +25,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Node: {node?.message}</p>
-        <p>Python: {JSON.stringify(python)}</p>
+        <p>Node: <b>{node?.message}</b></p>
+        <p>Python: <b>{python?.message}</b></p>
         <p>PHP: {JSON.stringify(php)}</p>
       </header>
     </div>

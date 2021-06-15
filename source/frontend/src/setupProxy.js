@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     '/api/node',
     createProxyMiddleware({
-      target: 'http://app.docker:3000',
+      target: 'http://app.docker',
       changeOrigin: true,
       pathRewrite: {
         "^/api/node": "",
@@ -14,7 +14,7 @@ module.exports = function (app) {
   app.use(
     '/api/python',
     createProxyMiddleware({
-      target: 'http://py.docker:8111',
+      target: 'http://py.docker',
       changeOrigin: true,
       pathRewrite: {
         "^/api/python": "",
@@ -24,7 +24,7 @@ module.exports = function (app) {
   app.use(
     '/api/php',
     createProxyMiddleware({
-      target: 'http://php.docker:8000',
+      target: 'http://php.docker',
       changeOrigin: true,
       pathRewrite: {
         "^/api/php": "",

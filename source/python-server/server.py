@@ -16,7 +16,7 @@ def post_actions(data):
 def indx():
     if request.method == 'GET':
         return jsonify(
-            message="Hello from Python"
+            message="Hello from Python in Docker"
         )
 
 if __name__ == "__main__":
