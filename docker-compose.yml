@@ -17,13 +17,13 @@ services:
       - M:/mus/gp:/gp
 
     environment:
-      PORT: 3000
+      PORT: 80
 
     depends_on:
       - redis
 
     ports:
-      - "3001:3000"
+      - "3001:80"
 
     hostname: app.docker
 
@@ -36,7 +36,7 @@ services:
       - ./source/python-server:/app
 
     ports:
-      - "8111:8111"
+      - "8111:80"
 
     hostname: py.docker
 
@@ -49,7 +49,7 @@ services:
       - ./source/php:/app
 
     ports:
-      - "8000:8000"
+      - "8000:80"
 
     hostname: php.docker
 
@@ -70,6 +70,6 @@ services:
       - python-app
 
     ports:
-      - "3000:3000"
+      - "3000:80"
 
     hostname: front.docker
