@@ -38,6 +38,19 @@ services:
 
     hostname: py.docker
 
+  php-app:
+    container_name: mwf_php_app
+
+    build: ./source/php
+
+    volumes:
+      - ./source/php:/app
+
+    ports:
+      - "8000:8000"
+
+    hostname: php.docker
+
   frontend:
     container_name: mwf_frontend
 
