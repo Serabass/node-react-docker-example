@@ -23,7 +23,7 @@ services:
       - redis
 
     ports:
-      - "3000:3000"
+      - "3001:3000"
 
     hostname: app.docker
 
@@ -70,6 +70,6 @@ services:
       - python-app
 
     ports:
-      - "3001:3000"
+      - "3000:3000"
 
     hostname: front.docker
