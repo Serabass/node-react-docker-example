@@ -20,14 +20,13 @@ function App() {
   let [python]: any[] = useAjax('/api/python');
   let [php]: any[] = useAjax('/api/php');
 
-
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Node: <b>{node?.message}</b></p>
         <p>Python: <b>{python?.message}</b></p>
-        <p>PHP: {JSON.stringify(php)}</p>
+        <p>PHP: <b>{php?.message}</b></p>
       </header>
     </div>
   );
