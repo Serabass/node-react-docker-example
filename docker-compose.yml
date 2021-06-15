@@ -5,13 +5,13 @@ version: "3"
 
 services:
   redis:
-    container_name: mwf_redis
+    container_name: sandbox_redis
     image: redis
 
     hostname: redis.docker
 
   node-app:
-    container_name: mwf_node_app
+    container_name: sandbox_node_app
 
     build: ./source/app
 
@@ -31,7 +31,7 @@ services:
     hostname: app.docker
 
   python-app:
-    container_name: mwf_python_app
+    container_name: sandbox_python_app
 
     build: ./source/python-server
 
@@ -44,7 +44,7 @@ services:
     hostname: py.docker
 
   php-app:
-    container_name: mwf_php_app
+    container_name: sandbox_php_app
 
     image: bitnami/php-fpm:latest
 
@@ -57,7 +57,7 @@ services:
     hostname: php.docker
 
   frontend:
-    container_name: mwf_frontend
+    container_name: sandbox_frontend
 
     build: ./source/frontend
 
